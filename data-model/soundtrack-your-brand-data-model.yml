@@ -1,0 +1,173 @@
+generated: '2026-07-21'
+method: derived
+source: graphql/soundtrack-your-brand-introspection.json
+notes: Entity-relationship graph derived from the Soundtrack GraphQL schema via introspection. Relationships
+  are read from Relay connection fields (has_many) and direct object references (has_one) among the marquee
+  domain entities. IDs are GraphQL opaque global IDs resolvable via the node(id) query.
+id_scheme: 'graphql-global-id (opaque, base64-ish); fetch any entity via node(id: ID!)'
+entities:
+- Account
+- Location
+- SoundZone
+- Device
+- User
+- Playlist
+- Schedule
+- MusicLibrary
+- Track
+- Album
+- Artist
+- PublicAPIClient
+- SubscriptionItem
+- Cart
+- BillingGroup
+relationships:
+  Account:
+  - field: activityLog
+    kind: has_many
+    target: ActivityLogItem
+    via: connection
+  - field: carts
+    kind: has_many
+    target: Cart
+    via: connection
+  - field: musicLibrary
+    kind: has_one
+    target: MusicLibrary
+  - field: locations
+    kind: has_many
+    target: Location
+    via: connection
+  - field: soundZones
+    kind: has_many
+    target: SoundZone
+    via: connection
+  - field: onboardingSoundZone
+    kind: has_one
+    target: SoundZone
+  - field: contacts
+    kind: has_many
+    target: User
+    via: connection
+  Location:
+  - field: billingGroup
+    kind: has_one
+    target: BillingGroup
+  - field: account
+    kind: has_one
+    target: Account
+  - field: soundZones
+    kind: has_many
+    target: SoundZone
+    via: connection
+  - field: users
+    kind: has_many
+    target: User
+    via: connection
+  - field: invited
+    kind: has_many
+    target: PendingUser
+    via: connection
+  SoundZone:
+  - field: activityLog
+    kind: has_many
+    target: ActivityLogItem
+    via: connection
+  - field: playbackHistory
+    kind: has_many
+    target: HistoryTrack
+    via: connection
+  - field: blockedTracks
+    kind: has_many
+    target: BlockedTrack
+    via: connection
+  - field: schedule
+    kind: has_one
+    target: Schedule
+  - field: account
+    kind: has_one
+    target: Account
+  - field: location
+    kind: has_one
+    target: Location
+  - field: device
+    kind: has_one
+    target: Device
+  - field: errors
+    kind: has_many
+    target: Error
+    via: connection
+  Device:
+  - field: soundZone
+    kind: has_one
+    target: SoundZone
+  User:
+  - field: accounts
+    kind: has_many
+    target: Account
+    via: connection
+  - field: defaultAccount
+    kind: has_one
+    target: Account
+  Playlist:
+  - field: tracks
+    kind: has_many
+    target: Track
+    via: connection
+  - field: genres
+    kind: has_many
+    target: PlaylistGenre
+    via: connection
+  - field: similarPlaylists
+    kind: has_many
+    target: Playlist
+    via: connection
+  Schedule:
+  - field: playlists
+    kind: has_many
+    target: Playlist
+  MusicLibrary:
+  - field: playlists
+    kind: has_many
+    target: Playlist
+    via: connection
+  - field: schedules
+    kind: has_many
+    target: Schedule
+    via: connection
+  - field: soundtracks
+    kind: has_many
+    target: Soundtrack
+    via: connection
+  Track:
+  - field: album
+    kind: has_one
+    target: Album
+  - field: artists
+    kind: has_many
+    target: Artist
+  Album:
+  - field: artists
+    kind: has_many
+    target: Artist
+  - field: tracks
+    kind: has_many
+    target: Track
+    via: connection
+  Artist:
+  - field: station
+    kind: has_one
+    target: Playlist
+  - field: albums
+    kind: has_many
+    target: Album
+    via: connection
+  - field: tracks
+    kind: has_many
+    target: Track
+    via: connection
+  PublicAPIClient:
+  - field: accounts
+    kind: has_many
+    target: Account
+    via: connection

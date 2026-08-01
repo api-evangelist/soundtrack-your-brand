@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: derived
+source: graphql/soundtrack-your-brand-introspection.json
+docs: https://api.soundtrackyourbrand.com/v2/docs/errors
+format: graphql-errors
+summary: >-
+  Soundtrack API is GraphQL, so errors are not RFC 9457 problem+json. A response
+  returns HTTP 200 with a top-level `errors[]` array (each entry has message,
+  locations and path) alongside any partial `data`. HTTP 401 is returned when a
+  Bearer access token has expired (refresh via refreshLogin). Domain error state
+  is also modelled in the schema via the ErrorState enum and typed error/result
+  unions returned by mutations.
+transport_errors:
+  - status: 401
+    meaning: Access token expired or invalid.
+    remediation: Use refreshLogin with your refreshToken to obtain a new access token, or re-run loginUser.
+error_envelope:
+  http_status_on_graphql_error: 200
+  fields:
+    - message
+    - locations
+    - path
+    - extensions   # machine-readable detail when present
+schema_error_types:
+  # Derived from GraphQL introspection — typed error/result shapes the API returns
+  enums:
+    - ErrorState
+  note: >-
+    Many mutations return union result types (payload | typed error) rather than a
+    generic error; consult the SDL (graphql/soundtrack-your-brand.graphql) for the
+    per-operation result unions.

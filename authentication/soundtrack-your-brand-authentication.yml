@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.soundtrackyourbrand.com/v2/docs
+docs: https://api.soundtrackyourbrand.com/v2/docs
+summary:
+  types: [http]
+  http_schemes: [basic, bearer]
+  api_key_in: []
+  oauth2_flows: []
+  notes: >-
+    The Soundtrack GraphQL API is a single endpoint that authenticates over HTTP
+    Authorization headers. API clients use HTTP Basic with a provisioned API
+    token. Applications acting on behalf of a Soundtrack user instead obtain a
+    Bearer access token via the loginUser mutation and refresh it with
+    refreshLogin. There is no OAuth2 authorization-code flow and no scope surface.
+schemes:
+  - name: apiTokenBasic
+    type: http
+    scheme: basic
+    description: >-
+      Provisioned API client token sent as `Authorization: Basic <token>`.
+      Request credentials via the API docs page. Compromised tokens are blocked.
+    header: 'Authorization: Basic <token>'
+    provisioning: https://api.soundtrackyourbrand.com/v2/docs
+    sources: [https://api.soundtrackyourbrand.com/v2/docs]
+  - name: userBearer
+    type: http
+    scheme: bearer
+    description: >-
+      Access token obtained from the loginUser mutation (email + password) or the
+      OTP flow (generateOTP / loginOTP), sent as `Authorization: Bearer <token>`.
+      Not recommended for production API clients (the underlying user can be rate
+      limited or suspended). Returns HTTP 401 when expired.
+    obtained_via: [loginUser, generateOTP, loginOTP, loginDevice]
+    refresh_via: refreshLogin
+    subscriptions: token supplied as a query parameter on the subscription connection
+    sources: [https://api.soundtrackyourbrand.com/v2/docs]
+mutations:
+  - loginUser        # email/password -> { token, refreshToken }
+  - refreshLogin     # refreshToken   -> { token, refreshToken }
+  - generateOTP
+  - loginOTP
+  - loginDevice
+  - generateStreamingUrl

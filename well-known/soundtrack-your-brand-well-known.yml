@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: probed
+source: live probe of /.well-known/* across API and website hosts
+hosts_probed:
+  - https://api.soundtrackyourbrand.com
+  - https://soundtrackyourbrand.com
+  - https://api.soundtrack.io
+documents: []
+notes: >-
+  No .well-known discovery documents were found. The API host
+  (api.soundtrackyourbrand.com) returns 404 for security.txt,
+  openid-configuration, oauth-authorization-server, api-catalog and
+  ai-plugin.json. The marketing host (soundtrackyourbrand.com) returns HTTP 200
+  for several of these paths, but the body is the Next.js catch-all 404 page
+  (soft-404), not a real well-known document — so none are recorded as present.
+probes:
+  - {host: 'https://api.soundtrackyourbrand.com', path: /.well-known/security.txt, status: 404}
+  - {host: 'https://api.soundtrackyourbrand.com', path: /.well-known/openid-configuration, status: 404}
+  - {host: 'https://api.soundtrackyourbrand.com', path: /.well-known/oauth-authorization-server, status: 404}
+  - {host: 'https://api.soundtrackyourbrand.com', path: /.well-known/api-catalog, status: 404}
+  - {host: 'https://api.soundtrackyourbrand.com', path: /.well-known/ai-plugin.json, status: 404}
+  - {host: 'https://soundtrackyourbrand.com', path: /.well-known/security.txt, status: 200, note: soft-404 (Next.js catch-all HTML)}
+  - {host: 'https://soundtrackyourbrand.com', path: /.well-known/openid-configuration, status: 200, note: soft-404 (Next.js catch-all HTML)}
+  - {host: 'https://soundtrackyourbrand.com', path: /.well-known/oauth-authorization-server, status: 200, note: soft-404 (Next.js catch-all HTML)}
+  - {host: 'https://soundtrackyourbrand.com', path: /.well-known/api-catalog, status: 200, note: soft-404 (Next.js catch-all HTML)}
+  - {host: 'https://soundtrackyourbrand.com', path: /.well-known/ai-plugin.json, status: 404}
+  - {host: 'https://api.soundtrack.io', path: /.well-known/security.txt, status: 404}

@@ -1,0 +1,850 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: graphql/soundtrack-your-brand-introspection.json
+notes: No official hosted/remote MCP server was found for Soundtrack (searched docs, npm @modelcontextprotocol,
+  and MCP registries). This is a CANDIDATE tool list derived one-to-one from the Soundtrack GraphQL operations,
+  to seed a future MCP server. Auth would map to the Basic API token or a user Bearer token.
+server:
+  name: soundtrack-your-brand
+  transport: http
+  url: null
+  api_endpoint: https://api.soundtrackyourbrand.com/v2
+tool_count: 205
+tools:
+- name: query_scheduleTemplates
+  description: 'GraphQL query: scheduleTemplates'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.scheduleTemplates
+  kind: query
+- name: query_dummyAccountCohortApiQuery
+  description: 'GraphQL query: dummyAccountCohortApiQuery'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.dummyAccountCohortApiQuery
+  kind: query
+- name: query_marvinExplorerCities
+  description: Get list of cities that can be used with marvin explorer
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.marvinExplorerCities
+  kind: query
+- name: query_marvinExplorerCity
+  description: Get data for city for marvin explorer
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.marvinExplorerCity
+  kind: query
+- name: query__growth_api
+  description: 'GraphQL query: _growth_api'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query._growth_api
+  kind: query
+- name: query_editorialHome
+  description: Editorial Home Page
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.editorialHome
+  kind: query
+- name: query_flags
+  description: Returns some flags for a given context.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.flags
+  kind: query
+- name: query_radioPlaylist
+  description: Returns the radio playlist for another type
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.radioPlaylist
+  kind: query
+- name: query_playlistEditorTrackSuggestions
+  description: Playlist Editor Track Suggestions
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.playlistEditorTrackSuggestions
+  kind: query
+- name: query_activityLog
+  description: 'GraphQL query: activityLog'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.activityLog
+  kind: query
+- name: query_partnerGraph
+  description: 'GraphQL query: partnerGraph'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.partnerGraph
+  kind: query
+- name: query_products
+  description: Available self service products
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.products
+  kind: query
+- name: query_price
+  description: Get product price
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.price
+  kind: query
+- name: query_cart
+  description: Get a cart by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.cart
+  kind: query
+- name: query_subscriptionItem
+  description: Get a subscriptionItem by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.subscriptionItem
+  kind: query
+- name: query_checkoutSession
+  description: Get a checkout session by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.checkoutSession
+  kind: query
+- name: query_streamingPrice
+  description: Get a list of prices for streaming music
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.streamingPrice
+  kind: query
+- name: query_changePlanCost
+  description: Get the cost for changing plan
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.changePlanCost
+  kind: query
+- name: query_changePlanSession
+  description: Get an account plan change session
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.changePlanSession
+  kind: query
+- name: query_requiredTaxFields
+  description: Get required tax fields for buyer and seller countries
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.requiredTaxFields
+  kind: query
+- name: query_aiOnboardingAgent
+  description: 'Full onboarding agent with search and location detection. Possible errors: - `UNAUTHENTICATED`:
+    Request is missing valid Soundtrack credentials or a valid captc'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.aiOnboardingAgent
+  kind: query
+- name: query_aiOnboardingNoLocationAgent
+  description: 'Onboarding agent with search but without location detection. Possible errors: - `UNAUTHENTICATED`:
+    Request is missing valid Soundtrack credentials or a valid ca'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.aiOnboardingNoLocationAgent
+  kind: query
+- name: query_aiOnboardingBusinessTypeAgent
+  description: 'Business type classification agent. Possible errors: - `UNAUTHENTICATED`: Request is missing
+    valid Soundtrack credentials or a valid captcha token.'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.aiOnboardingBusinessTypeAgent
+  kind: query
+- name: query_aiOnboardingLocationsAgent
+  description: 'Locations-only agent with search. Possible errors: - `UNAUTHENTICATED`: Request is missing
+    valid Soundtrack credentials or a valid captcha token.'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.aiOnboardingLocationsAgent
+  kind: query
+- name: query_aiOnboardingNoSearchAgent
+  description: 'Onboarding agent without search (uses Places API data only). Possible errors: - `UNAUTHENTICATED`:
+    Request is missing valid Soundtrack credentials or a valid ca'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.aiOnboardingNoSearchAgent
+  kind: query
+- name: query_musicProfileFastAgent
+  description: 'Fast music-profile agent. Single-call variant with web search and capped thinking; returns
+    only atmosphere and genre tags. Possible errors: - `UNAUTHENTICATED`:'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.musicProfileFastAgent
+  kind: query
+- name: query_businessProfileAgent
+  description: Business profile agent. Single-call variant with web search and capped thinking; returns
+    the business name, whether it has multiple locations, a short descripti
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.businessProfileAgent
+  kind: query
+- name: query_marvinPromptAgent
+  description: Marvin prompt agent. Single-call variant with web search and capped thinking; returns two
+    distinct vibes of the business, each with a display title, a display d
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.marvinPromptAgent
+  kind: query
+- name: query_artist
+  description: Get a single artist identified by their unique ID
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.artist
+  kind: query
+- name: query_album
+  description: Get a single album identified by its unique ID
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.album
+  kind: query
+- name: query_playlist
+  description: Get a playlist by its unique ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.playlist
+  kind: query
+- name: query_tracks
+  description: Get many(max 500) tracks by ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.tracks
+  kind: query
+- name: query_musicLibrary
+  description: Get a music library using the owner ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.musicLibrary
+  kind: query
+- name: query_schedule
+  description: Get a schedule by its unique ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.schedule
+  kind: query
+- name: query_nowPlaying
+  description: Find the currently playing track for a sound zone using its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.nowPlaying
+  kind: query
+- name: query_search
+  description: 'Search for one of: albums, artists, tracks, playlists and categories.'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.search
+  kind: query
+- name: query_dmcaCompliancePossible
+  description: 'GraphQL query: dmcaCompliancePossible'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.dmcaCompliancePossible
+  kind: query
+- name: query_getTrackRecommendationsForDmcaCompliance
+  description: 'GraphQL query: getTrackRecommendationsForDmcaCompliance'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getTrackRecommendationsForDmcaCompliance
+  kind: query
+- name: query_helloPlaybackReporting
+  description: 'GraphQL query: helloPlaybackReporting'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.helloPlaybackReporting
+  kind: query
+- name: query_requests
+  description: Requests relevant to what is being viewed (one scope), newest first, optionally filtered
+    by status. Paginated per the relay connection spec (forward only).
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.requests
+  kind: query
+- name: query_searchByTags
+  description: 'GraphQL query: searchByTags'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.searchByTags
+  kind: query
+- name: query_user
+  description: Get a user by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.user
+  kind: query
+- name: query_account
+  description: Get an account by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.account
+  kind: query
+- name: query_device
+  description: Find a device by ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.device
+  kind: query
+- name: query_soundZone
+  description: Get a sound zone by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.soundZone
+  kind: query
+- name: query_location
+  description: Get a location by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.location
+  kind: query
+- name: query_intercomHash
+  description: 'GraphQL query: intercomHash'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.intercomHash
+  kind: query
+- name: query_me
+  description: The main entry point to begin querying and exploring the API. Returns different nodes depending
+    on the current API session.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.me
+  kind: query
+- name: query_node
+  description: Find entities implementing the node interface by ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.node
+  kind: query
+- name: query_queryInfo
+  description: Get the calculated complexity for a query.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.queryInfo
+  kind: query
+- name: query_samlConfig
+  description: Get a saml config by its account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.samlConfig
+  kind: query
+- name: query_samlIsEnabled
+  description: Check if a slug is available.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.samlIsEnabled
+  kind: query
+- name: query_getStreamingUrl
+  description: Get a streaming url for playback from a sound zone. Requires the url stream add-on.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getStreamingUrl
+  kind: query
+- name: query_accountEnums
+  description: 'GraphQL query: accountEnums'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.accountEnums
+  kind: query
+- name: query_invitation
+  description: Get a location invitation by its ID.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.invitation
+  kind: query
+- name: query_invitationValidate
+  description: 'GraphQL query: invitationValidate'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.invitationValidate
+  kind: query
+- name: query_nearbySoundZones
+  description: 'GraphQL query: nearbySoundZones'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.nearbySoundZones
+  kind: query
+- name: query_apiRequestHandlerPing
+  description: Liveness field for the api-request-handler subgraph
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.apiRequestHandlerPing
+  kind: query
+- name: query_library
+  description: Library containing user saved content.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.library
+  kind: query
+- name: query_demoApiGreet
+  description: 'GraphQL query: demoApiGreet'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.demoApiGreet
+  kind: query
+- name: query_editorialArtist
+  description: Returns the editorial page for an artist
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.editorialArtist
+  kind: query
+- name: query_editorialTrack
+  description: Returns the editorial page for a track
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.editorialTrack
+  kind: query
+- name: query_getAccountAnnouncements
+  description: 'GraphQL query: getAccountAnnouncements'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getAccountAnnouncements
+  kind: query
+- name: query_announcement
+  description: 'GraphQL query: announcement'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.announcement
+  kind: query
+- name: query_announcementCampaign
+  description: 'GraphQL query: announcementCampaign'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.announcementCampaign
+  kind: query
+- name: query_getAccountCampaigns
+  description: 'GraphQL query: getAccountCampaigns'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getAccountCampaigns
+  kind: query
+- name: query_getMusicFromPrompt
+  description: Get playlists recommendations
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getMusicFromPrompt
+  kind: query
+- name: query_leadClassification
+  description: 'Classifies a sales lead using the ADK agent and returns a score, classification, and reasoning.
+    Possible errors: - `UNAUTHORIZED`: The supplied `password` is in'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.leadClassification
+  kind: query
+- name: query_browseCategory
+  description: Browse Category
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.browseCategory
+  kind: query
+- name: query_browseCategories
+  description: 'GraphQL query: browseCategories'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.browseCategories
+  kind: query
+- name: query_editorialBrowse
+  description: Editorial Browse Page
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.editorialBrowse
+  kind: query
+- name: query_smartShuffleRecommendations
+  description: Get Smart Shuffle recommendations.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.smartShuffleRecommendations
+  kind: query
+- name: query_playlistPromptSuggestion
+  description: Get playlist prompt suggestions to display in the UI.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.playlistPromptSuggestion
+  kind: query
+- name: query_playlistPackagingRecommendation
+  description: Get a custom playlist packaging for a list of tracks and/or prompt! Includes title and
+    description
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.playlistPackagingRecommendation
+  kind: query
+- name: query_getTracksFromPrompt
+  description: Get tracks from a prompt!
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getTracksFromPrompt
+  kind: query
+- name: query_editorialSearch
+  description: Search
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.editorialSearch
+  kind: query
+- name: query_schedulePlaylistSuggestions
+  description: 'GraphQL query: schedulePlaylistSuggestions'
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.schedulePlaylistSuggestions
+  kind: query
+- name: query_getExternalSpotifyComposerData
+  description: Get composer data for a playlist id
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getExternalSpotifyComposerData
+  kind: query
+- name: query_getTracksFromSpotifyTracks
+  description: Get Soundtrack tracks using Spotify track uris.
+  source_operation: graphql/soundtrack-your-brand.graphql#Query.getTracksFromSpotifyTracks
+  kind: query
+- name: mutation_userSetCompanyRole
+  description: Set the user's role in the company they work at.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.userSetCompanyRole
+  kind: mutation
+- name: mutation_accountSignupQuestionnaireSubmit
+  description: Submit the signup questionnaire for a specific account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountSignupQuestionnaireSubmit
+  kind: mutation
+- name: mutation_setOnboardingStep
+  description: Set status of an onboarding-step to keep track of the onboarding progress.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.setOnboardingStep
+  kind: mutation
+- name: mutation_createHomeTasteProfileFromOnboarding
+  description: 'GraphQL mutation: createHomeTasteProfileFromOnboarding'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createHomeTasteProfileFromOnboarding
+  kind: mutation
+- name: mutation_writeSectionsSeen
+  description: Write events to BigQuery
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.writeSectionsSeen
+  kind: mutation
+- name: mutation_writeFeedback
+  description: Write feedback form data to BigQuery
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.writeFeedback
+  kind: mutation
+- name: mutation_applyFlags
+  description: Report a flag apply event
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.applyFlags
+  kind: mutation
+- name: mutation_pitchSong
+  description: Request a song to be reviewed for addition into the Soundtrack readymade playlists
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.pitchSong
+  kind: mutation
+- name: mutation_createAffiliatePartner
+  description: 'GraphQL mutation: createAffiliatePartner'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createAffiliatePartner
+  kind: mutation
+- name: mutation_billingGroupUpdate
+  description: Update a billingGroup and its properties.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.billingGroupUpdate
+  kind: mutation
+- name: mutation_billingCycleUpdate
+  description: Update the billing cycle for an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.billingCycleUpdate
+  kind: mutation
+- name: mutation_subscriptionCancel
+  description: Cancel a subscription. The sound zone will still be able to play music until its paid until
+    date is passed.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.subscriptionCancel
+  kind: mutation
+- name: mutation_subscriptionActivate
+  description: Activate a subscription.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.subscriptionActivate
+  kind: mutation
+- name: mutation_cartCreate
+  description: Create a cart for an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.cartCreate
+  kind: mutation
+- name: mutation_addToCart
+  description: Add an add-on or similar product to a cart. For streaming music, use addStreamingToCart.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.addToCart
+  kind: mutation
+- name: mutation_addStreamingToCart
+  description: Add a sound zone to a cart.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.addStreamingToCart
+  kind: mutation
+- name: mutation_cartUpdate
+  description: Update a cart.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.cartUpdate
+  kind: mutation
+- name: mutation_cartCheckout
+  description: Check out a cart.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.cartCheckout
+  kind: mutation
+- name: mutation_cartCheckoutAsync
+  description: Check out a cart.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.cartCheckoutAsync
+  kind: mutation
+- name: mutation_addOnDeactivate
+  description: Deactivate an add-on.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.addOnDeactivate
+  kind: mutation
+- name: mutation_addOnReactivate
+  description: Reactivate an add-on that has not yet expired.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.addOnReactivate
+  kind: mutation
+- name: mutation_accountChangePlan
+  description: Change an account plan.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountChangePlan
+  kind: mutation
+- name: mutation_taxExemptFormSubmit
+  description: Submit a tax exempt form.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.taxExemptFormSubmit
+  kind: mutation
+- name: mutation_taxExemptFormDelete
+  description: Delete a tax exempt form.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.taxExemptFormDelete
+  kind: mutation
+- name: mutation_accountActivateInvoice
+  description: Activate invoice.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountActivateInvoice
+  kind: mutation
+- name: mutation_createPlaylist
+  description: 'GraphQL mutation: createPlaylist'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createPlaylist
+  kind: mutation
+- name: mutation_createManualPlaylist
+  description: Creates an new `manual` playlist.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createManualPlaylist
+  kind: mutation
+- name: mutation_updateManualPlaylist
+  description: Updates info for a `manual` playlist.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateManualPlaylist
+  kind: mutation
+- name: mutation_createSpotifySyncedPlaylist
+  description: Creates an new `spotify-composer` playlist.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createSpotifySyncedPlaylist
+  kind: mutation
+- name: mutation_updateSpotifyPlaylist
+  description: Updates info for a `spotify-composer` playlist.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateSpotifyPlaylist
+  kind: mutation
+- name: mutation_syncSpotifySyncedPlaylist
+  description: Force a sync between the underlying Spotify Playlist and the `spotify-composer` playlist
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.syncSpotifySyncedPlaylist
+  kind: mutation
+- name: mutation_createStationFromPlaylist
+  description: Creates an new `seed-composer` playlist.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createStationFromPlaylist
+  kind: mutation
+- name: mutation_updateStationFromPlaylist
+  description: Updates info for a `seed-composer` playlist.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateStationFromPlaylist
+  kind: mutation
+- name: mutation_spliceManualPlaylist
+  description: Splices the tracks of a `manual` playlist. This mutation changes the contents of a playlist
+    by removing or replacing existing tracks and/or adding new tracks in
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.spliceManualPlaylist
+  kind: mutation
+- name: mutation_addToMusicLibrary
+  description: Add a playlist or a schedule to a music library.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.addToMusicLibrary
+  kind: mutation
+- name: mutation_removeFromMusicLibrary
+  description: Remove a playlist or a schedule from a music library.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.removeFromMusicLibrary
+  kind: mutation
+- name: mutation_blockTrack
+  description: block a track for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.blockTrack
+  kind: mutation
+- name: mutation_unblockTrack
+  description: unblock a track for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.unblockTrack
+  kind: mutation
+- name: mutation_createSchedule
+  description: Create a schedule.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createSchedule
+  kind: mutation
+- name: mutation_updateSchedule
+  description: Update a schedule.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateSchedule
+  kind: mutation
+- name: mutation_playbackReporting
+  description: 'GraphQL mutation: playbackReporting'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.playbackReporting
+  kind: mutation
+- name: mutation_createRequest
+  description: Create a request for an admin to act on.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createRequest
+  kind: mutation
+- name: mutation_resolveRequest
+  description: Approve or decline a pending request, recording who resolved it and when. Executing the
+    requested action happens elsewhere.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.resolveRequest
+  kind: mutation
+- name: mutation_createStationFromTags
+  description: 'GraphQL mutation: createStationFromTags'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createStationFromTags
+  kind: mutation
+- name: mutation_updateStationFromTags
+  description: 'GraphQL mutation: updateStationFromTags'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateStationFromTags
+  kind: mutation
+- name: mutation_loginUser
+  description: Login a user with a email/password combination.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.loginUser
+  kind: mutation
+- name: mutation_loginDevice
+  description: Login using a device's credentials.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.loginDevice
+  kind: mutation
+- name: mutation_generateOTP
+  description: Generate an OTP (one time password) using a users tokens.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.generateOTP
+  kind: mutation
+- name: mutation_loginOTP
+  description: Login using an OTP (one time password).
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.loginOTP
+  kind: mutation
+- name: mutation_refreshLogin
+  description: Request a new token using a refresh token.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.refreshLogin
+  kind: mutation
+- name: mutation_generateStreamingUrl
+  description: Generate a streaming url for playback from a sound zone. Requires the url stream add-on.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.generateStreamingUrl
+  kind: mutation
+- name: mutation_devicePair
+  description: Pair a device using a code.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.devicePair
+  kind: mutation
+- name: mutation_play
+  description: Start playback for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.play
+  kind: mutation
+- name: mutation_pause
+  description: Pause playback for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.pause
+  kind: mutation
+- name: mutation_skipTrack
+  description: Skip the current playing track for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.skipTrack
+  kind: mutation
+- name: mutation_skipTracks
+  description: Skip x number of tracks for a playing sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.skipTracks
+  kind: mutation
+- name: mutation_setVolume
+  description: Set the volume of a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.setVolume
+  kind: mutation
+- name: mutation_soundZonePairDevice
+  description: Pair a device to a sound zone using a pairing code.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZonePairDevice
+  kind: mutation
+- name: mutation_soundZoneUnpair
+  description: Unpair a device paired to a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneUnpair
+  kind: mutation
+- name: mutation_soundZoneInitiatePairing
+  description: Initiate a pairing process for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneInitiatePairing
+  kind: mutation
+- name: mutation_setPlayFrom
+  description: Change playback source of a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.setPlayFrom
+  kind: mutation
+- name: mutation_locationCreate
+  description: Create a location and a first sound zone under it.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.locationCreate
+  kind: mutation
+- name: mutation_locationUpdate
+  description: Update a location and its properties.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.locationUpdate
+  kind: mutation
+- name: mutation_soundZoneCreate
+  description: Create a sound zone under a location.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneCreate
+  kind: mutation
+- name: mutation_soundZoneUpdate
+  description: Update a sound zones properties.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneUpdate
+  kind: mutation
+- name: mutation_soundZoneDelete
+  description: Deletes a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneDelete
+  kind: mutation
+- name: mutation_soundZoneCancelUpcomingStreamingTypeChange
+  description: Cancel a sound zone's upcoming streaming type change, if any.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneCancelUpcomingStreamingTypeChange
+  kind: mutation
+- name: mutation_soundZoneUpdateSettings
+  description: Set settings on sound zones.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneUpdateSettings
+  kind: mutation
+- name: mutation_soundZoneAssignSource
+  description: Assign play source to sound zones.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneAssignSource
+  kind: mutation
+- name: mutation_soundZoneQueueTracks
+  description: Queue tracks to a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneQueueTracks
+  kind: mutation
+- name: mutation_soundZoneClearQueuedTracks
+  description: Clear all queued tracks for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneClearQueuedTracks
+  kind: mutation
+- name: mutation_soundZoneSetPlaybackOrder
+  description: Sets the playback order of a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneSetPlaybackOrder
+  kind: mutation
+- name: mutation_soundZoneGenerateRemoteCode
+  description: Generates a new remote code for the sound zone, used by our remotes.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneGenerateRemoteCode
+  kind: mutation
+- name: mutation_soundZoneSubmitCancellationReason
+  description: Submit a cancellation reason for a sound zone.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.soundZoneSubmitCancellationReason
+  kind: mutation
+- name: mutation_samlConfigCreate
+  description: Create SAML config for an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.samlConfigCreate
+  kind: mutation
+- name: mutation_samlConfigUpdate
+  description: Update SAML config for an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.samlConfigUpdate
+  kind: mutation
+- name: mutation_accountUpdate
+  description: Update an account and its properties.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountUpdate
+  kind: mutation
+- name: mutation_accountAddUser
+  description: Add a user to an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountAddUser
+  kind: mutation
+- name: mutation_accountRemoveUser
+  description: Remove a user from an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountRemoveUser
+  kind: mutation
+- name: mutation_accountUpdateUserRoles
+  description: Update a user's role for a specific account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountUpdateUserRoles
+  kind: mutation
+- name: mutation_accountSetContacts
+  description: 'Set contacts for an account with a list of user IDs. Possible errors: `BAD_USER_INPUT`'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountSetContacts
+  kind: mutation
+- name: mutation_userUpdate
+  description: Update a users properties.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.userUpdate
+  kind: mutation
+- name: mutation_userChangeEmail
+  description: Update a users email.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.userChangeEmail
+  kind: mutation
+- name: mutation_userChangePassword
+  description: Change a users password.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.userChangePassword
+  kind: mutation
+- name: mutation_accountRegister
+  description: Register a new account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountRegister
+  kind: mutation
+- name: mutation_locationInviteUser
+  description: Invite a user to a location.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.locationInviteUser
+  kind: mutation
+- name: mutation_invitationRemove
+  description: Remove an invitation from a location.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.invitationRemove
+  kind: mutation
+- name: mutation_locationRemoveUser
+  description: Remove a user from a location.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.locationRemoveUser
+  kind: mutation
+- name: mutation_userAcceptInvitation
+  description: Accept a user invitation
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.userAcceptInvitation
+  kind: mutation
+- name: mutation_userUpdateLocationRoles
+  description: Update the role for a user on a location.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.userUpdateLocationRoles
+  kind: mutation
+- name: mutation_userUpdateAccountRoles
+  description: Update the role for a user on an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.userUpdateAccountRoles
+  kind: mutation
+- name: mutation_accountUpdateUserInvitationRoles
+  description: Update the role for a user invitation to an account.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountUpdateUserInvitationRoles
+  kind: mutation
+- name: mutation_updateLocationUserInvitationRoles
+  description: Update the role for a user invitation to a location.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateLocationUserInvitationRoles
+  kind: mutation
+- name: mutation_invitationResend
+  description: Resend the invitation
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.invitationResend
+  kind: mutation
+- name: mutation_accountLinkToExternalId
+  description: Link an account to an external id.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.accountLinkToExternalId
+  kind: mutation
+- name: mutation_createStationFromPrompt
+  description: Create a station using a prompt
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createStationFromPrompt
+  kind: mutation
+- name: mutation_updateStationFromPrompt
+  description: Update a station using a prompt
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateStationFromPrompt
+  kind: mutation
+- name: mutation_apiAccessRequest
+  description: Submit an API access request for human review. The outcome is communicated over email.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.apiAccessRequest
+  kind: mutation
+- name: mutation_addToLibrary
+  description: Add items to library.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.addToLibrary
+  kind: mutation
+- name: mutation_removeFromLibrary
+  description: Remove items from library.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.removeFromLibrary
+  kind: mutation
+- name: mutation_tagLibraryItems
+  description: Tag library items
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.tagLibraryItems
+  kind: mutation
+- name: mutation_untagLibraryItems
+  description: Untag library items
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.untagLibraryItems
+  kind: mutation
+- name: mutation_like
+  description: 'GraphQL mutation: like'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.like
+  kind: mutation
+- name: mutation_unlike
+  description: 'GraphQL mutation: unlike'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.unlike
+  kind: mutation
+- name: mutation_createAnnouncement
+  description: 'GraphQL mutation: createAnnouncement'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createAnnouncement
+  kind: mutation
+- name: mutation_updateAnnouncement
+  description: 'GraphQL mutation: updateAnnouncement'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateAnnouncement
+  kind: mutation
+- name: mutation_createAnnouncementCampaign
+  description: 'GraphQL mutation: createAnnouncementCampaign'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createAnnouncementCampaign
+  kind: mutation
+- name: mutation_updateAnnouncementCampaign
+  description: 'GraphQL mutation: updateAnnouncementCampaign'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateAnnouncementCampaign
+  kind: mutation
+- name: mutation_addGroupToAnnouncementCampaign
+  description: 'GraphQL mutation: addGroupToAnnouncementCampaign'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.addGroupToAnnouncementCampaign
+  kind: mutation
+- name: mutation_removeGroupFromAnnouncementCampaign
+  description: 'GraphQL mutation: removeGroupFromAnnouncementCampaign'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.removeGroupFromAnnouncementCampaign
+  kind: mutation
+- name: mutation_updateAnnouncementCampaignAssignment
+  description: 'GraphQL mutation: updateAnnouncementCampaignAssignment'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateAnnouncementCampaignAssignment
+  kind: mutation
+- name: mutation_assignAnnouncementCampaignToSoundZones
+  description: 'GraphQL mutation: assignAnnouncementCampaignToSoundZones'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.assignAnnouncementCampaignToSoundZones
+  kind: mutation
+- name: mutation_unassignAnnouncementCampaignFromSoundZones
+  description: 'GraphQL mutation: unassignAnnouncementCampaignFromSoundZones'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.unassignAnnouncementCampaignFromSoundZones
+  kind: mutation
+- name: mutation_createAnnouncementPreview
+  description: 'GraphQL mutation: createAnnouncementPreview'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createAnnouncementPreview
+  kind: mutation
+- name: mutation_createAnnouncementAudioFileUploadUrl
+  description: 'GraphQL mutation: createAnnouncementAudioFileUploadUrl'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createAnnouncementAudioFileUploadUrl
+  kind: mutation
+- name: mutation_writeTasteProfile
+  description: Write live taste profile and playlists to library
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.writeTasteProfile
+  kind: mutation
+- name: mutation_copyTasteProfileFrom
+  description: Copy taste profile between accounts
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.copyTasteProfileFrom
+  kind: mutation
+- name: mutation_leadClassificationRequest
+  description: 'Submits a lead classification request to be processed asynchronously. Returns an acknowledgement
+    message immediately. Possible errors: - `UNAUTHORIZED`: The sup'
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.leadClassificationRequest
+  kind: mutation
+- name: mutation_giveSmartShuffleFeedback
+  description: Sending Smart Shuffle feedback to BigQuery
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.giveSmartShuffleFeedback
+  kind: mutation
+- name: mutation_createSpotifyConnection
+  description: Create a Spotify Connection
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.createSpotifyConnection
+  kind: mutation
+- name: mutation_importSpotifyPlaylists
+  description: Import playlists from Spotify, optionally adding them to the account music library.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.importSpotifyPlaylists
+  kind: mutation
+- name: mutation_getTracksFromSpotifyPlaylists
+  description: Get Soundtrack tracks using Spotify playlist uris.
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.getTracksFromSpotifyPlaylists
+  kind: mutation
+- name: mutation_updateSpotifyPlaylistMetadata
+  description: Update metadata on playlists imported from Spotify
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateSpotifyPlaylistMetadata
+  kind: mutation
+- name: mutation_refreshSpotifyPlaylists
+  description: Refresh playlists imported from Spotify
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.refreshSpotifyPlaylists
+  kind: mutation
+- name: mutation_setSpotifyPlaylistAutoRefreshFrequency
+  description: Set automatic refresh policy for a playlist
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.setSpotifyPlaylistAutoRefreshFrequency
+  kind: mutation
+- name: mutation_updateSpotifyPlaylistsConnection
+  description: Move playlists imported from Spotify to another Spotify connection
+  source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateSpotifyPlaylistsConnection
+  kind: mutation

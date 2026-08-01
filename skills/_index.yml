@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: generated
+source: >-
+  Grounded in operationIds verified against graphql/soundtrack-your-brand.graphql
+  (Soundtrack GraphQL introspection). No provider-published Agent Skills / AGENTS.md found.
+api: graphql/soundtrack-your-brand.graphql
+skills:
+  - file: soundtrack-your-brand-now-playing.md
+    name: Show what's playing in a sound zone
+    operations: [nowPlaying, nowPlayingUpdate, soundZone]
+  - file: soundtrack-your-brand-playback-control.md
+    name: Control playback in a sound zone
+    operations: [play, pause, skipTrack, setVolume, soundZone, playbackUpdate]
+  - file: soundtrack-your-brand-pair-device.md
+    name: Pair a playback device to a sound zone
+    operations: [soundZoneInitiatePairing, soundZonePairDevice, devicePair, soundZoneUnpair, device]

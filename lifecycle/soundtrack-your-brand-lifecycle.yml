@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.soundtrackyourbrand.com/v2/docs
+versioning:
+  scheme: uri-path
+  current: v2
+  endpoint: https://api.soundtrackyourbrand.com/v2
+  docs: https://api.soundtrackyourbrand.com/v2/docs
+deprecation:
+  mechanism: graphql-schema-directive
+  directive: '@deprecated'
+  count_observed: 118
+  policy_url: null
+  notes: >-
+    Deprecation is expressed in the GraphQL schema via @deprecated with a
+    deprecationReason on fields and enum values; introspection lists them with
+    includeDeprecated. No separate written deprecation/sunset policy page was found.
+status_page: https://status.soundtrack.io/
+status_provider: atlassian-statuspage
+changelog: https://api.soundtrackyourbrand.com/v2/docs/changelog
+sla:
+  url: null
+  notes: Soundtrack API is free for all paying Soundtrack customers; no separate API SLA page found.
+support:
+  slack: public Soundtrack API Slack channel (linked from the docs)
+  contact_sdk: sdk@soundtrack.io

@@ -1,0 +1,255 @@
+asyncapi: 3.0.0
+info:
+  title: Soundtrack API — GraphQL Subscriptions
+  version: v2
+  description: Event/streaming surface of the Soundtrack API, derived from the GraphQL Subscriptions root
+    type via introspection. Clients subscribe over websocket to the single GraphQL endpoint (token supplied
+    as a query parameter). Each channel below is a real GraphQL subscription field. Payload shapes are
+    the named GraphQL return types in graphql/soundtrack-your-brand.graphql.
+  x-generated: '2026-07-21'
+  x-method: derived
+  x-source: graphql/soundtrack-your-brand-introspection.json
+servers:
+  production:
+    host: api.soundtrackyourbrand.com
+    pathname: /v2
+    protocol: wss
+    description: GraphQL subscriptions over websocket; access token passed as a query parameter.
+channels:
+  accountUpdate:
+    address: accountUpdate
+    messages:
+      accountUpdateMessage:
+        $ref: '#/components/messages/accountUpdateMessage'
+    description: Subscription channel accountUpdate
+  locationUpdate:
+    address: locationUpdate
+    messages:
+      locationUpdateMessage:
+        $ref: '#/components/messages/locationUpdateMessage'
+    description: Subscription channel locationUpdate
+  locationEventForParent:
+    address: locationEventForParent
+    messages:
+      locationEventForParentMessage:
+        $ref: '#/components/messages/locationEventForParentMessage'
+    description: Subscription channel locationEventForParent
+  soundZoneUpdate:
+    address: soundZoneUpdate
+    messages:
+      soundZoneUpdateMessage:
+        $ref: '#/components/messages/soundZoneUpdateMessage'
+    description: Subscription channel soundZoneUpdate
+  deviceUpdate:
+    address: deviceUpdate
+    messages:
+      deviceUpdateMessage:
+        $ref: '#/components/messages/deviceUpdateMessage'
+    description: Subscription channel deviceUpdate
+  soundZoneEventForParent:
+    address: soundZoneEventForParent
+    messages:
+      soundZoneEventForParentMessage:
+        $ref: '#/components/messages/soundZoneEventForParentMessage'
+    description: Subscription channel soundZoneEventForParent
+  nowPlayingUpdate:
+    address: nowPlayingUpdate
+    messages:
+      nowPlayingUpdateMessage:
+        $ref: '#/components/messages/nowPlayingUpdateMessage'
+    description: Subscription channel nowPlayingUpdate
+  playbackUpdate:
+    address: playbackUpdate
+    messages:
+      playbackUpdateMessage:
+        $ref: '#/components/messages/playbackUpdateMessage'
+    description: Subscription channel playbackUpdate
+  musicLibraryUpdate:
+    address: musicLibraryUpdate
+    messages:
+      musicLibraryUpdateMessage:
+        $ref: '#/components/messages/musicLibraryUpdateMessage'
+    description: Subscription channel musicLibraryUpdate
+  playlistUpdate:
+    address: playlistUpdate
+    messages:
+      playlistUpdateMessage:
+        $ref: '#/components/messages/playlistUpdateMessage'
+    description: Subscription channel playlistUpdate
+  scheduleUpdate:
+    address: scheduleUpdate
+    messages:
+      scheduleUpdateMessage:
+        $ref: '#/components/messages/scheduleUpdateMessage'
+    description: Subscription channel scheduleUpdate
+  userUpdate:
+    address: userUpdate
+    messages:
+      userUpdateMessage:
+        $ref: '#/components/messages/userUpdateMessage'
+    description: Subscription channel userUpdate
+  libraryUpdate:
+    address: libraryUpdate
+    messages:
+      libraryUpdateMessage:
+        $ref: '#/components/messages/libraryUpdateMessage'
+    description: Subscription channel libraryUpdate
+operations:
+  accountUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/accountUpdate'
+    summary: accountUpdate
+  locationUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/locationUpdate'
+    summary: locationUpdate
+  locationEventForParent:
+    action: receive
+    channel:
+      $ref: '#/channels/locationEventForParent'
+    summary: locationEventForParent
+  soundZoneUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/soundZoneUpdate'
+    summary: soundZoneUpdate
+  deviceUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/deviceUpdate'
+    summary: deviceUpdate
+  soundZoneEventForParent:
+    action: receive
+    channel:
+      $ref: '#/channels/soundZoneEventForParent'
+    summary: soundZoneEventForParent
+  nowPlayingUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/nowPlayingUpdate'
+    summary: nowPlayingUpdate
+  playbackUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/playbackUpdate'
+    summary: playbackUpdate
+  musicLibraryUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/musicLibraryUpdate'
+    summary: musicLibraryUpdate
+  playlistUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/playlistUpdate'
+    summary: playlistUpdate
+  scheduleUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/scheduleUpdate'
+    summary: scheduleUpdate
+  userUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/userUpdate'
+    summary: userUpdate
+  libraryUpdate:
+    action: receive
+    channel:
+      $ref: '#/channels/libraryUpdate'
+    summary: libraryUpdate
+components:
+  messages:
+    accountUpdateMessage:
+      name: accountUpdate
+      title: accountUpdate
+      summary: Update event for accountUpdate
+      payload:
+        type: object
+        x-graphql-type: AccountUpdateSubscriptionPayload
+    locationUpdateMessage:
+      name: locationUpdate
+      title: locationUpdate
+      summary: Update event for locationUpdate
+      payload:
+        type: object
+        x-graphql-type: LocationUpdateSubscriptionPayload
+    locationEventForParentMessage:
+      name: locationEventForParent
+      title: locationEventForParent
+      summary: Update event for locationEventForParent
+      payload:
+        type: object
+        x-graphql-type: LocationEventForParentPayload
+    soundZoneUpdateMessage:
+      name: soundZoneUpdate
+      title: soundZoneUpdate
+      summary: Update event for soundZoneUpdate
+      payload:
+        type: object
+        x-graphql-type: SoundZoneUpdatePayload
+    deviceUpdateMessage:
+      name: deviceUpdate
+      title: deviceUpdate
+      summary: Update event for deviceUpdate
+      payload:
+        type: object
+        x-graphql-type: DeviceUpdatePayload
+    soundZoneEventForParentMessage:
+      name: soundZoneEventForParent
+      title: soundZoneEventForParent
+      summary: Update event for soundZoneEventForParent
+      payload:
+        type: object
+        x-graphql-type: SoundZoneEventForParentPayload
+    nowPlayingUpdateMessage:
+      name: nowPlayingUpdate
+      title: nowPlayingUpdate
+      summary: Update event for nowPlayingUpdate
+      payload:
+        type: object
+        x-graphql-type: NowPlayingUpdatePayload
+    playbackUpdateMessage:
+      name: playbackUpdate
+      title: playbackUpdate
+      summary: Update event for playbackUpdate
+      payload:
+        type: object
+        x-graphql-type: PlaybackUpdatePayload
+    musicLibraryUpdateMessage:
+      name: musicLibraryUpdate
+      title: musicLibraryUpdate
+      summary: Update event for musicLibraryUpdate
+      payload:
+        type: object
+        x-graphql-type: MusicLibraryUpdatePayload
+    playlistUpdateMessage:
+      name: playlistUpdate
+      title: playlistUpdate
+      summary: Update event for playlistUpdate
+      payload:
+        type: object
+        x-graphql-type: PlaylistUpdatePayload
+    scheduleUpdateMessage:
+      name: scheduleUpdate
+      title: scheduleUpdate
+      summary: Update event for scheduleUpdate
+      payload:
+        type: object
+        x-graphql-type: ScheduleUpdatePayload
+    userUpdateMessage:
+      name: userUpdate
+      title: userUpdate
+      summary: Update event for userUpdate
+      payload:
+        type: object
+        x-graphql-type: UserUpdateSubscriptionPayload
+    libraryUpdateMessage:
+      name: libraryUpdate
+      title: libraryUpdate
+      summary: Update event for libraryUpdate
+      payload:
+        type: object
+        x-graphql-type: LibraryUpdateSubscriptionPayload

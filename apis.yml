@@ -1,28 +1,131 @@
 aid: soundtrack-your-brand
 name: Soundtrack Your Brand
-description: 'Soundtrack Your Brand is a company surfaced as a portfolio company of eqt-ventures, northzone
-  and added to the API Evangelist network as a stub for enrichment. Sector: music. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Soundtrack Your Brand (Soundtrack) is a Stockholm-based business music streaming company that provides
+  licensed background music for physical spaces such as retail stores, restaurants, cafes, hotels and
+  gyms. Its Soundtrack API is a single-endpoint GraphQL API that lets partners and customers build
+  display, control and monitoring applications on top of Soundtrack: read what is currently playing in a
+  sound zone, control playback, pair playback devices, and manage schedules, playlists and music
+  libraries across accounts and locations. The API is free for paying Soundtrack customers and is
+  complemented by a partner-gated native Player SDK for embedding Soundtrack playback in hardware.
 url: https://raw.githubusercontent.com/api-evangelist/soundtrack-your-brand/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://api.soundtrackyourbrand.com/v2/docs/img/favicon.ico
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - eqt-ventures
 - northzone
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: has-graphql-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Music
-apis: []
+- Music Streaming
+- Background Music
+- GraphQL
+- Retail
+- Hospitality
+- Audio
+- API
+apis:
+- aid: soundtrack-api
+  name: Soundtrack API
+  description: >-
+    Single-endpoint GraphQL API (queries, mutations and websocket subscriptions) for building display,
+    control and monitoring apps on top of Soundtrack — now-playing, playback control, device pairing,
+    schedules and playlists. 718 types, 79 queries, 126 mutations, 13 subscriptions.
+  humanURL: https://api.soundtrackyourbrand.com/v2/docs
+  baseURL: https://api.soundtrackyourbrand.com/v2
+  tags:
+  - GraphQL
+  - Music
+  - Streaming
+  properties:
+  - type: GraphQL
+    url: graphql/soundtrack-your-brand.graphql
+  - type: GraphQL Source
+    url: graphql/soundtrack-your-brand-introspection.json
+  - type: Documentation
+    url: https://api.soundtrackyourbrand.com/v2/docs
+  - type: APIReference
+    url: https://api.soundtrackyourbrand.com/v2/explore
+common:
+- type: DomainSecurity
+  url: security/soundtrack-your-brand-domain-security.yml
+- type: Website
+  url: https://www.soundtrackyourbrand.com
+- type: DeveloperPortal
+  url: https://api.soundtrackyourbrand.com/v2/docs
+- type: Documentation
+  url: https://api.soundtrackyourbrand.com/v2/docs
+- type: APIReference
+  url: https://api.soundtrackyourbrand.com/v2/explore
+- type: GettingStarted
+  url: https://api.soundtrackyourbrand.com/v2/docs
+- type: ChangeLog
+  url: https://api.soundtrackyourbrand.com/v2/docs/changelog
+- type: StatusPage
+  url: https://status.soundtrack.io/
+- type: Blog
+  url: https://www.soundtrackyourbrand.com/blog
+- type: Support
+  url: https://www.soundtrackyourbrand.com/support
+- type: GitHubOrganization
+  url: https://github.com/soundtrackyourbrand
+- type: Pricing
+  url: https://www.soundtrackyourbrand.com/pricing
+- type: SignUp
+  url: https://www.soundtrackyourbrand.com/signup
+- type: Login
+  url: https://www.soundtrackyourbrand.com/login
+- type: TermsOfService
+  url: https://www.soundtrackyourbrand.com/legal/terms
+- type: PrivacyPolicy
+  url: https://www.soundtrackyourbrand.com/legal/privacy
+- type: Authentication
+  url: authentication/soundtrack-your-brand-authentication.yml
+- type: Conventions
+  url: conventions/soundtrack-your-brand-conventions.yml
+- type: ErrorCatalog
+  url: errors/soundtrack-your-brand-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/soundtrack-your-brand-lifecycle.yml
+- type: Conformance
+  url: conformance/soundtrack-your-brand-conformance.yml
+- type: DataModel
+  url: data-model/soundtrack-your-brand-data-model.yml
+- type: AsyncAPI
+  url: asyncapi/soundtrack-your-brand-subscriptions-asyncapi.yml
+- type: MCPServer
+  url: mcp/soundtrack-your-brand-mcp.yml
+- type: LLMsTxt
+  url: llms/soundtrack-your-brand-llms.txt
+- type: Packages
+  url: packages/soundtrack-your-brand-packages.yml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://soundtrackyourbrand.com
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 18
+  pass: local-v1

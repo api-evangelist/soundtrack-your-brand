@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  npm registry search, GitHub org github.com/soundtrackyourbrand, and the
+  Soundtrack API + SDK documentation.
+notes: >-
+  Soundtrack does not publish an installable first-party GraphQL client SDK on
+  any public registry (npm/PyPI/Maven/NuGet/RubyGems/etc.). The GraphQL API is
+  consumed with any standard GraphQL/HTTP client. Two first-party developer
+  resources exist: a public GraphQL example app (frontend demo, not a library)
+  and the separate partner-gated Soundtrack Player SDK (a native C SDK for
+  hardware/embedded playback partners, distributed under NDA — not a public
+  package).
+packages:
+  - language: javascript
+    registry: github
+    name: soundtrack_api-example_app
+    url: https://github.com/soundtrackyourbrand/soundtrack_api-example_app
+    kind: example-app
+    install: git clone; yarn
+    official: true
+    notes: Reference/demo app showing how to call the Soundtrack GraphQL API. Not a distributable SDK.
+  - language: c
+    registry: partner
+    name: Soundtrack Player SDK (libsplayer)
+    url: https://developer.soundtrackyourbrand.com/
+    kind: native-sdk
+    access: partner-nda
+    official: true
+    notes: >-
+      Native C SDK + headers for embedding Soundtrack playback in partner
+      hardware/software. Access requires a partnership request (sdk@soundtrack.io)
+      and NDA; a shared library is built per partner toolchain. Not publicly installable.

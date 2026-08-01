@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: derived
+source: graphql/soundtrack-your-brand-introspection.json
+standards:
+  - id: graphql
+    conforms: true
+    evidence: Single GraphQL endpoint at https://api.soundtrackyourbrand.com/v2; introspection enabled; Query/Mutation/Subscriptions root types present.
+  - id: graphql-subscriptions
+    conforms: true
+    evidence: Subscriptions root type with 13 real-time channels (nowPlayingUpdate, soundZoneUpdate, playbackUpdate, ...) over websocket.
+  - id: relay-cursor-connections
+    conforms: true
+    evidence: Connection/Edge types with PageInfo (hasNextPage/endCursor/startCursor) throughout the schema.
+  - id: graphql-global-object-identification
+    conforms: true
+    evidence: 'node(id: ID!) root query for refetching any object by opaque global ID.'
+  - id: http-basic-auth
+    conforms: true
+    evidence: API client tokens sent as Authorization Basic.
+  - id: http-bearer-auth
+    conforms: true
+    evidence: User access tokens from loginUser sent as Authorization Bearer.
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth2 authorization-code flow or scope surface; token/basic auth only.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: GraphQL errors[] envelope, not application/problem+json.

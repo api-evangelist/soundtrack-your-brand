@@ -1,0 +1,62 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.soundtrackyourbrand.com/v2/docs
+docs: https://api.soundtrackyourbrand.com/v2/docs
+api_style: graphql
+endpoint: https://api.soundtrackyourbrand.com/v2
+summary: >-
+  Soundtrack API is a single-endpoint GraphQL API (queries, mutations and
+  websocket subscriptions). Requests are HTTP POST with a JSON body; the
+  recommended production form is parameterised queries (query + variables +
+  operationName) sent as application/json. Pagination follows the Relay cursor
+  connection spec. Authentication is HTTP Basic (API token) or Bearer (user
+  login). There is no documented idempotency-key mechanism.
+request:
+  method: POST
+  content_types:
+    - application/json            # recommended (parameterised queries + variables)
+    - application/graphql         # supported but slated for deprecation
+  parameterised_queries: true     # { query, variables, operationName }
+  multiple_operations: true       # operationName selects among multiple operations
+  fragments: true
+  batching: multiple aliased queries in one document to save round-trips
+authentication:
+  see: authentication/soundtrack-your-brand-authentication.yml
+  styles: [http-basic-token, http-bearer-user-token]
+pagination:
+  style: relay-cursor-connections
+  request_params: [first, after, last, before]
+  response_shape:
+    connection: edges + pageInfo
+    edge: { node, cursor, plus relationship metadata (e.g. role) }
+    page_info:
+      fields: [hasNextPage, hasPreviousPage, startCursor, endCursor]
+  cursor_field: pageInfo.endCursor
+error_envelope:
+  style: graphql
+  shape: >-
+    Top-level `errors[]` array alongside partial `data`. Each error carries
+    message, locations and path; machine-readable detail is under extensions.
+  see: errors/soundtrack-your-brand-problem-types.yml
+rate_limiting:
+  documented: true
+  docs: https://api.soundtrackyourbrand.com/v2/docs
+  notes: >-
+    The API documents a rate-limit page. Users authorised via loginUser (rather
+    than an API client token) may be rate limited or suspended if abused.
+idempotency:
+  supported: false
+  notes: No idempotency-key header or mutation-level idempotency contract is documented.
+versioning:
+  scheme: uri-path
+  current: v2
+  see: lifecycle/soundtrack-your-brand-lifecycle.yml
+deprecation:
+  mechanism: graphql-schema-directive
+  notes: >-
+    Fields and enum values are deprecated in-schema via the GraphQL @deprecated
+    directive with deprecationReason (118 deprecated members observed via
+    introspection); introspection surfaces them with includeDeprecated.
+tooling:
+  explorer: https://api.soundtrackyourbrand.com/v2/explore
+  introspection: enabled
