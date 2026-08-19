@@ -848,3 +848,9 @@ tools:
   description: Move playlists imported from Spotify to another Spotify connection
   source_operation: graphql/soundtrack-your-brand.graphql#Mutation.updateSpotifyPlaylistsConnection
   kind: mutation
+deployment:
+  mode: none
+  verified: derived
+  tools: 205
+  checked: '2026-08-12'
+  source: catalog MCP census
