@@ -41,6 +41,15 @@ tags:
 - Retail
 - Hospitality
 - Audio
+tags_raw:
+- Company
+- Music
+- Music Streaming
+- Background Music
+- GraphQL
+- Retail
+- Hospitality
+- Audio
 - API
 apis:
 - aid: soundtrack-api
