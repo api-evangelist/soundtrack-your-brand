@@ -9,6 +9,17 @@ description: >-
   libraries across accounts and locations. The API is free for paying Soundtrack customers and is
   complemented by a partner-gated native Player SDK for embedding Soundtrack playback in hardware.
 url: https://raw.githubusercontent.com/api-evangelist/soundtrack-your-brand/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
