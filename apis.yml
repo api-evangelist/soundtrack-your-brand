@@ -1,13 +1,12 @@
 aid: soundtrack-your-brand
 name: Soundtrack Your Brand
-description: >-
-  Soundtrack Your Brand (Soundtrack) is a Stockholm-based business music streaming company that provides
-  licensed background music for physical spaces such as retail stores, restaurants, cafes, hotels and
-  gyms. Its Soundtrack API is a single-endpoint GraphQL API that lets partners and customers build
-  display, control and monitoring applications on top of Soundtrack: read what is currently playing in a
-  sound zone, control playback, pair playback devices, and manage schedules, playlists and music
-  libraries across accounts and locations. The API is free for paying Soundtrack customers and is
-  complemented by a partner-gated native Player SDK for embedding Soundtrack playback in hardware.
+description: 'Soundtrack Your Brand (Soundtrack) is a Stockholm-based business music streaming company
+  that provides licensed background music for physical spaces such as retail stores, restaurants, cafes,
+  hotels and gyms. Its Soundtrack API is a single-endpoint GraphQL API that lets partners and customers
+  build display, control and monitoring applications on top of Soundtrack: read what is currently playing
+  in a sound zone, control playback, pair playback devices, and manage schedules, playlists and music
+  libraries across accounts and locations. The API is free for paying Soundtrack customers and is complemented
+  by a partner-gated native Player SDK for embedding Soundtrack playback in hardware.'
 url: https://raw.githubusercontent.com/api-evangelist/soundtrack-your-brand/refs/heads/main/apis.yml
 deliveryModel:
   model: saas
@@ -31,7 +30,10 @@ accessModel:
   source:
   - authentication
   - security
-  - {url: 'https://www.soundtrackyourbrand.com', status: 301, note: 'declared website redirects to https://www.soundtrack.io/ — a different registrable domain (soundtrackyourbrand.com -> soundtrack.io), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
+  - url: https://www.soundtrackyourbrand.com
+    status: 301
+    note: declared website redirects to https://www.soundtrack.io/ — a different registrable domain (soundtrackyourbrand.com
+      -> soundtrack.io), possible rename or acquisition (probed 2026-09-03, roadmap#169)
   generated: '2026-09-03'
   method: derived
 image: https://api.soundtrackyourbrand.com/v2/docs/img/favicon.ico
@@ -65,12 +67,11 @@ tags_raw:
 - Audio
 - API
 apis:
-- aid: soundtrack-api
+- aid: soundtrack-your-brand:soundtrack-api
   name: Soundtrack API
-  description: >-
-    Single-endpoint GraphQL API (queries, mutations and websocket subscriptions) for building display,
-    control and monitoring apps on top of Soundtrack — now-playing, playback control, device pairing,
-    schedules and playlists. 718 types, 79 queries, 126 mutations, 13 subscriptions.
+  description: Single-endpoint GraphQL API (queries, mutations and websocket subscriptions) for building
+    display, control and monitoring apps on top of Soundtrack — now-playing, playback control, device
+    pairing, schedules and playlists. 718 types, 79 queries, 126 mutations, 13 subscriptions.
   humanURL: https://api.soundtrackyourbrand.com/v2/docs
   baseURL: https://api.soundtrackyourbrand.com/v2
   tags:
@@ -135,7 +136,10 @@ common:
   url: asyncapi/soundtrack-your-brand-subscriptions-asyncapi.yml
 - type: X-MCPServerCandidate
   url: mcp/soundtrack-your-brand-mcp.yml
-  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate
+    — a tool list derived from the published API contracts, not an existing server. The scorer already
+    read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type
+    surfaces with a server that does not exist.'
 - type: LLMsTxt
   url: llms/soundtrack-your-brand-llms.txt
 - type: Packages
