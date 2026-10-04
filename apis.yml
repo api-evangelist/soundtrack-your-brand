@@ -56,6 +56,7 @@ tags:
 - Retail
 - Hospitality
 - Audio
+- Real-Time
 tags_raw:
 - Company
 - Music
@@ -66,6 +67,7 @@ tags_raw:
 - Hospitality
 - Audio
 - API
+- Real-Time
 apis:
 - aid: soundtrack-your-brand:soundtrack-api
   name: Soundtrack API
