@@ -64,6 +64,128 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Soundtrack Your Brand is a company surfaced as a portfolio company of eqt-ventures, northzone and added to the API Evangelist network as a stub for enrichment. Sector: music. This profile is a lead awaiting the enrichment pipeline.
+Soundtrack Your Brand (Soundtrack) is a Stockholm-based business music streaming company that provides licensed background music for physical spaces such as retail stores, restaurants, cafes, hotels and gyms. Its Soundtrack API is a single-endpoint GraphQL API that lets partners and customers build display, control and monitoring applications on top of Soundtrack: read what is currently playing in a sound zone, control playback, pair playback devices, and manage schedules, playlists and music libraries across accounts and locations. The API is free for paying Soundtrack customers and is complemented by a partner-gated native Player SDK for embedding Soundtrack playback in hardware.
 
-Backed by: eqt-ventures, northzone — https://soundtrackyourbrand.com
+**Areas:** Company · Music · Music Streaming · Background Music · GraphQL · Retail · Hospitality · Audio · Real-Time
+
+## Soundtrack Your Brand on APIs.io
+
+Everything profiled for Soundtrack Your Brand is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/soundtrack-your-brand/](https://apis.io/providers/soundtrack-your-brand/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Soundtrack API](https://apis.io/apis/soundtrack-your-brand/soundtrack-api/) — Single-endpoint GraphQL API (queries, mutations and websocket subscriptions) for building display, control and monitoring apps on top of Soundtrack —…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Soundtrack API — GraphQL Subscriptions](https://apis.io/asyncapis/soundtrack-your-brand/soundtrack-your-brand-subscriptions-asyncapi/)
+
+#### Event channels (13)
+
+Individual events and webhooks the provider emits.
+
+- [accountUpdate](https://apis.io/channels/soundtrack-your-brand/accountupdate/)
+- [deviceUpdate](https://apis.io/channels/soundtrack-your-brand/deviceupdate/)
+- [libraryUpdate](https://apis.io/channels/soundtrack-your-brand/libraryupdate/)
+- [locationEventForParent](https://apis.io/channels/soundtrack-your-brand/locationeventforparent/)
+- [locationUpdate](https://apis.io/channels/soundtrack-your-brand/locationupdate/)
+- [musicLibraryUpdate](https://apis.io/channels/soundtrack-your-brand/musiclibraryupdate/)
+- [nowPlayingUpdate](https://apis.io/channels/soundtrack-your-brand/nowplayingupdate/)
+- [playbackUpdate](https://apis.io/channels/soundtrack-your-brand/playbackupdate/)
+- [playlistUpdate](https://apis.io/channels/soundtrack-your-brand/playlistupdate/)
+- [scheduleUpdate](https://apis.io/channels/soundtrack-your-brand/scheduleupdate/)
+- [soundZoneEventForParent](https://apis.io/channels/soundtrack-your-brand/soundzoneeventforparent/)
+- [soundZoneUpdate](https://apis.io/channels/soundtrack-your-brand/soundzoneupdate/)
+- [userUpdate](https://apis.io/channels/soundtrack-your-brand/userupdate/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [soundtrack-your-brand](https://apis.io/servers/soundtrack-your-brand/soundtrack-your-brand/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Soundtrack Your Brand Authentication](https://apis.io/security/soundtrack-your-brand/soundtrack-your-brand-authentication/)
+- [Soundtrack Your Brand Domain Security](https://apis.io/security/soundtrack-your-brand/soundtrack-your-brand-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.soundtrackyourbrand.com)
+- [Documentation](https://api.soundtrackyourbrand.com/v2/docs)
+- [Getting started](https://api.soundtrackyourbrand.com/v2/docs)
+- [API reference](https://api.soundtrackyourbrand.com/v2/explore)
+- [Pricing](https://www.soundtrackyourbrand.com/pricing)
+- [Sign up](https://www.soundtrackyourbrand.com/signup)
+- [Support](https://www.soundtrackyourbrand.com/support)
+- [Changelog](https://api.soundtrackyourbrand.com/v2/docs/changelog)
+- [Blog](https://www.soundtrackyourbrand.com/blog)
+- [Terms of service](https://www.soundtrackyourbrand.com/legal/terms)
+- [Privacy policy](https://www.soundtrackyourbrand.com/legal/privacy)
+- [GitHub](https://github.com/soundtrackyourbrand)
+- [Status](https://status.soundtrack.io/)
+
+## API Evangelist rating
+
+**Kin Score 41.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 51.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 34.2 |
+
+**Agent readiness 18.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 20.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/soundtrack-your-brand/](https://apis.io/providers/soundtrack-your-brand/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Soundtrack Your Brand: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/soundtrack-your-brand/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
